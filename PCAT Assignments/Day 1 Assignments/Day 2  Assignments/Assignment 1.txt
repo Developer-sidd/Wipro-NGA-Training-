@@ -1,0 +1,44 @@
+Bubble sort  Assignment 
+
+
+1. Start
+2. Declare an array named arr with size n                          
+3. Run a for loop to take n inputs from user                             
+4. iterate over array to sort                                             
+      	for(int i=0; i<n; i++)                                           
+	      for(int j=0; j<n-i-1; j++)                               
+		   if(arr[j] > arr[j+1])
+			arr = swap(arr,arr[j],arr[j+1])	
+	       end of inner for loop
+5. 	end of outer for loop
+6. print sorted array temp
+7. end
+
+1. function swap(arr,num1, num2)
+2. declare variable temp
+3. int  temp = num1
+   	num1 = num2
+   	num2 = arr		
+4. return arr
+6. end
+
+Bubble sort works by repeatedly traversing over an array by comparingadjacent elements and this puts the largest element at last position then again it traverse from 0 while now it goes till 2nd last element as last element was fixed in 1st iteration and goes further.
+
+arr = [10,5,6,33,1]
+
+	i	j	j+1	arr[0]	arr[1]	arr[2]	arr[3]	arr[4]
+	
+	i=0	j=0	1	5	10	6	33	1		
+	i=0	j=1	2	5	6	10	33	1		
+	i=0	j=2	3	5	6	10	33	1		
+	i=0	j=3	4	5	6	10	1	33												
+										
+	i=1	j=0	1	5	6	10	1	33		
+	i=1	j=1	2	5	6	10	1	33		
+	i=1	j=2	3	5	6	1	10	33		
+										
+	i=2	j=0	1	5	6	1	10	33		
+	i=2	j=1	2	5	1	6	10	33		
+										
+	i=3	j=0	1	1	5	6	10	33
+										
